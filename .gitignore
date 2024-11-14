@@ -138,6 +138,7 @@ ehthumbs_vista.db
 # Unity UPM packages may contain Documentation~ and Samples~ folders.
 !**/Documentation~
 !**/Samples~
+!**/ProjectData~
 .fuse_hidden*
 .directory
 .Trash-*
