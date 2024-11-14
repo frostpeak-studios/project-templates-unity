@@ -1,10 +1,14 @@
 # Changelog
 
-## [v1.1.0] - Unreleased
+## [v1.1.0] - 2024-11-14
 
 ### Added
 
 - Newtonsoft JSON library
+
+### Changed
+
+- Updated all packages to latest compatible versions
 
 ## [v1.0.0] - 2024-11-06
 
