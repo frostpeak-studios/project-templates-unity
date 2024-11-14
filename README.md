@@ -1,4 +1,4 @@
-﻿# Project Templates for Unity
+# Project Templates for Unity
 
 This repo contains our project templates for Unity. We use these templates to create new projects for our plugins.
 
