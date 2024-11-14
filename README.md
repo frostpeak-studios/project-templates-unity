@@ -1,4 +1,4 @@
-﻿# Project Templates for Unity
+# Project Templates for Unity
 
 This repo contains our project templates for Unity. We use these templates to create new projects for our plugins.
 
@@ -42,9 +42,11 @@ The templates contain some basic project setup and configuration that we use in 
 - Scene hierarchy example with Febucci's custom hierarchy package included and configured
 - Default packages we want to use:
     - Addressables
+    - Code coverage
     - Input System
     - Localization
     - Memory Profiler (2022+)
+    - Newtonsoft JSON.NET
     - Profile Analyzer
     - TextMeshPro
     - URP
@@ -52,6 +54,7 @@ The templates contain some basic project setup and configuration that we use in 
     - Timeline
     - Version Control
     - Visual Scripting
+- Upgrades all packages to latest compatible versions
 
 ## Compatibility
 

@@ -36,9 +36,7 @@ xcuserdata/
 /[Uu]ser[Ss]ettings/
 ExportedObj/
 .consulo/
-*.csproj
 *.unityproj
-*.sln
 *.suo
 *.user
 *.userprefs
@@ -49,7 +47,6 @@ ExportedObj/
 *.mdb
 *.opendb
 *.VC.db
-*.DotSettings
 *.pidb.meta
 *.pdb.meta
 *.mdb.meta
@@ -78,6 +75,17 @@ sysinfo.txt
 /[Aa]ssets/PlayFabSDK/Shared/Public/Resources/PlayFabSharedSettings.asset.meta
 /[Aa]ssets/PlayFabEditorExtensions/Editor/Resources/PlayFabEditorPrefsSO.asset
 /[Aa]ssets/PlayFabEditorExtensions/Editor/Resources/PlayFabEditorPrefsSO.asset.meta
+
+# Unity projects need to track the Packages folder.
+# **/[Pp]ackages/*
+
+# Unity projects have lots of .meta files that need to be tracked.
+#*.meta
+
+# Unity auto-generates these files, comment them out if non-Unity project.
+*.csproj
+*.sln
+*.DotSettings
 
 ## Unreal ##
 Build/*/**
@@ -126,8 +134,11 @@ ehthumbs_vista.db
 *.lnk
 
 ## Linux ##
-# Comment this out to commit ~Samples and ~Docs for Unity packages
-#*~
+*~
+# Unity UPM packages may contain Documentation~ and Samples~ folders.
+!**/Documentation~
+!**/Samples~
+!**/ProjectData~
 .fuse_hidden*
 .directory
 .Trash-*
@@ -179,8 +190,7 @@ fastlane/test_output
 **/[Aa][Rr][Mm]/
 **/[Aa][Rr][Mm]64/
 **/[Aa]rtifacts/
-# Don't ignore by default because some projects have scripts we need in this folder.
-#**/[Bb]in/
+**/[Bb]in/
 **/[Bb]inaries/
 **/[Bb]ld/
 **/[Bb]uild/
@@ -199,6 +209,10 @@ fastlane/test_output
 **/[Xx]64/
 **/[Xx]86/
 **/[Ww][Ii][Nn]32/
+# Frostpeak plugins may have a Build folder that contains scripts for build pipelines,
+# prebuild processors, build settings, etc. These should be tracked.
+!**/Frostpeak/**/Build
+!**/Packages/**/Build
 
 ## Logs ##
 **/[Ll]og/
@@ -263,9 +277,6 @@ crash.*.log
 *.snupkg
 *.nuget.props
 *.nuget.targets
-# Unity needs the Packages folder, so only uncomment this if you're not using Unity.
-# The packages folder can be ignored because of Package Restore.
-#**/[Pp]ackages/*
 !**/[Pp]ackages/build/
 # Uncomment if necessary however generally it will be regenerated when needed
 #!**/[Pp]ackages/repositories.config
@@ -291,10 +302,6 @@ override.tf
 override.tf.json
 *_override.tf
 *_override.tf.json
-# Include override files you do wish to add to version control using negated pattern
-# !example_override.tf
-# Include tfplan files to ignore the plan output of command: terraform plan -out=tfplan
-# example: *tfplan*
 **/.terragrunt-cache/
 
 ## Ansible ##
@@ -337,7 +344,6 @@ StyleCopReport.xml
 *_p.c
 *_h.h
 *.ilk
-*.meta
 *.iobj
 *.ipdb
 *.pgc
@@ -393,13 +399,8 @@ DocProject/Help/html
 publish/
 *.[Pp]ublish.xml
 *.azurePubxml
-# Note: Comment the next line if you want to checkin your web deploy settings,
-# but database connection strings (with potential passwords) will be unencrypted
 *.pubxml
 *.publishproj
-# Microsoft Azure Web App publish settings. Comment the next line if you want to
-# checkin your Azure Web App publish settings, but sensitive information contained
-# in these scripts will be unencrypted
 PublishScripts/
 csx/
 *.build.csdef
@@ -420,12 +421,8 @@ ClientBin/
 *.pfx
 *.publishsettings
 orleans.codegen.cs
-# Including strong name files can present a security risk
-# (https://github.com/github/gitignore/pull/2483#issue-259490424)
-#*.snk
-# Since there are multiple workflows, uncomment next line to ignore bower_components
-# (https://github.com/github/gitignore/pull/1529#issuecomment-104372622)
-#bower_components/
+*.snk
+bower_components/
 Generated_Code/
 _UpgradeReport_Files/
 Backup*/
@@ -486,3 +483,8 @@ FodyWeavers.xsd
 ## Go ##
 !go.mod
 !go.sum
+
+## Python ##
+package/*
+!package/setup.py
+proj/
