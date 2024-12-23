@@ -4,14 +4,20 @@ This repo contains our project templates for Unity. We use these templates to cr
 
 ## Installation
 
+### Download Templates
+
+You can download the latest templates from the [releases page](https://github.com/frostpeak-studios/project-templates-unity/releases).
+
 ### Creating Template Package
+
+Alternatively, you can clone the repo and create the template package yourself.
 
 1. Copy the contents of the template you want to use into a local folder named `package`
 2. Use 7z or another archiving tool to create a `.tgz` archive of the `package` folder (zip format works fine,
    but the extension still must be `.tgz`).
 3. Name the archive `com.unity.template.frostpeak-studios-1.[template-year].[template-version].tgz`
-    - `com.unity.template.frostpeak-studios-1.2022.0.tgz`
-    - `com.unity.template.frostpeak-studios-1.2021.0.tgz`
+    - `com.unity.template.frostpeak-studios-1.2022.2.tgz`
+    - `com.unity.template.frostpeak-studios-1.2021.2.tgz`
 
 ### Editor Path Installation
 
@@ -27,15 +33,14 @@ versions.
 
 1. Move the archive to `C:\Users\[username]\AppData\Roaming\UnityHub\Templates`
 2. Modify the `manifest.json` file in that directory, adding the template to the desired version(s) under dependencies:
-   - `"com.unity.template.frostpeak-studios": "1.2022.0"`
-   - `"com.unity.template.frostpeak-studios": "1.2021.0"`
+   - `"com.unity.template.frostpeak-studios": "1.2022.2"`
+   - `"com.unity.template.frostpeak-studios": "1.2021.2"`
 3. Restart Unity Hub
 
 ## Template Contents/Changes
 
 The templates contain some basic project setup and configuration that we use in all of our projects. This includes:
 
-- Peak Core package
 - Project folder structure
 - Project settings (IL2CPP, etc.)
 - Scene template
@@ -48,7 +53,7 @@ The templates contain some basic project setup and configuration that we use in 
     - Memory Profiler (2022+)
     - Newtonsoft JSON.NET
     - Profile Analyzer
-    - TextMeshPro
+    - TextMeshPro (essentials installed)
     - URP
 - Removes default packages we don't want:
     - Timeline
