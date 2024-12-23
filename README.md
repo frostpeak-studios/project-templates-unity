@@ -4,7 +4,13 @@ This repo contains our project templates for Unity. We use these templates to cr
 
 ## Installation
 
+### Download Templates
+
+You can download the latest templates from the [releases page](https://github.com/frostpeak-studios/project-templates-unity/releases).
+
 ### Creating Template Package
+
+Alternatively, you can clone the repo and create the template package yourself.
 
 1. Copy the contents of the template you want to use into a local folder named `package`
 2. Use 7z or another archiving tool to create a `.tgz` archive of the `package` folder (zip format works fine,
